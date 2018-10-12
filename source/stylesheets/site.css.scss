@@ -1,24 +1,38 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+@charset "utf-8";
+@import url('https://rsms.me/inter/inter-ui.css');
+@import "_normalize.scss";
+@import "_variables.scss";
+@import "_buttons.scss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter UI', sans-serif;
+}
+body > nav,
+body > section,
+body > footer,
+.full-width {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: $twelve-col;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  line-height: 1.5;
 }
 
 a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+  text-decoration: none;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
-}
+@import "header.scss";
+@import "index.scss";

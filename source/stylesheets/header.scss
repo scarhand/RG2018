@@ -1,0 +1,27 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #FFFFFF;
+  .container {
+    flex-direction: row;
+    .spacer {
+      flex: 1;
+    }
+    ul.navigation {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 6px 0;
+      list-style: none;
+      li {
+        display: flex;
+        a,
+        a:visited,
+        a:hover {
+          padding: 6px 15px;
+        }
+      }
+    }
+  }
+}

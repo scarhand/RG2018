@@ -5,8 +5,6 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :livereload
-
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -14,6 +12,12 @@ activate :livereload
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+Dir['data/events/*.yml'].each do |path|
+  file = File.basename(path)
+  event = File.basename(path, '.*')
+  proxy "/events/#{event}.html", "/events/template.html", locals: { event: event }, ignore: true
+end
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -46,3 +50,16 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+configure :development do
+  activate :livereload
+end
+
+# Build-specific configuration
+configure :build do
+  set :google_analytics, true
+  # For example, change the Compass output style for deployment
+  activate :minify_css
+  # Minify Javascript on build
+  activate :minify_javascript
+end

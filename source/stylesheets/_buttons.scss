@@ -1,0 +1,65 @@
+.button {
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  align-items: center;
+  line-height: 1;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed !important;
+    cursor: default;
+  }
+}
+.hard-pink {
+  transition: background-color 200ms linear;
+  background: #FA2583;
+  border: solid 2px #FA2583;
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background: #FFFFFF;
+    color: #FA2583;
+  }
+  &:disabled:hover {
+    background: #FA2583;
+  }
+  &.outline {
+    background: #FFFFFF;
+    color: #FA2583;
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      background: #FA2583;
+      color: #FFFFFF;
+    }
+  }
+}
+.grey {
+  transition: background-color 200ms linear;
+  background: #3C4E63;
+  border: solid 2px #3C4E63;
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background: #FFFFFF;
+    color: #3C4E63;
+  }
+  &:disabled:hover {
+    background: #3C4E63;
+  }
+  &.outline {
+    background: #FFFFFF;
+    border: solid 2px #3C4E63;
+    color: #3C4E63;
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      background: #3C4E63;
+      color: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.index {
+  .header {
+    height: 400px;
+    width: 100%;
+    background: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    .buttons {
+      display: flex;
+      width: $six-col;
+      justify-content: space-between;
+      align-self: flex-end;
+      margin-bottom: 90px;
+    }
+  }
+  .get-started {
+    align-items: center;
+    text-align: center;
+    .intro {
+      width: $eight-col;
+    }
+    .counters {
+      width: 100%;
+      display: flex;
+      margin: 60px 0;
+      .counter {
+        flex: 1;
+        span {
+          display: block;
+          text-align: center;
+          padding: 10px 0;
+          &.count {
+            font-weight: 700;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .blocks {
+      width: 100%;
+      display: flex;
+      border-top: solid 1px $light-bg;
+      div {
+        flex: 1;
+        &:first-child {
+          border-right: solid 1px $light-bg;
+        }
+        p {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}

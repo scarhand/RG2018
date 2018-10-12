@@ -1,0 +1,13 @@
+---
+---
+<%
+event_data = data.events[event]
+current_page.data.title = event_data.title
+%>
+
+<div class="container">
+  <%= event_data.location %>
+  <% event_data.volunteers.each do |v| %>
+    <%= v.name %>
+  <% end %>
+</div>
