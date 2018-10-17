@@ -4,12 +4,12 @@ page: index
 ---
 <%
 past_events = data.events.find_all { |k, v| v.end_date < Date.today }
-upcoming_events =  data.events.find_all { |k, v| v.start_date >= Date.today }
+upcoming_events =  data.events.find_all { |k, v| v.start_date >= Date.today }.sort { |a,b| a.last.start_date <=> b.last.start_date }
 volunteer_count = data.events.reduce(0) { |t,e| t + e.last.volunteers.count }
 %>
 <section class="header">
   <article class="buttons">
-    <a class="button hard-pink">Join an event</a>
+    <a class="button rg-red">Join an event</a>
     <a class="button grey">Organize an event</a>
   </article>
 </section>
@@ -50,6 +50,18 @@ volunteer_count = data.events.reduce(0) { |t,e| t + e.last.volunteers.count }
       <p>
         I'm afraid I still don't understand, sir. Wait a minute - you've been declared dead. You can't give orders around here. For an android with no feelings, he sure managed to evoke them in others. You did exactly what you had to do. You considered all your options, you tried every alternative and then you made the hard choice. 
       </p>
+    </div>
+  </article>
+  <article class="upcoming-events">
+    <h1>Upcoming events</h1>
+    <div class="events">
+      <% upcoming_events.each do |k, event| %>
+        <a class="event" href="/events/<%= k %>.html">
+          <img src="<%= event.image_url || '/images/railsgirls-sq.png' %>">
+          <h3 class="title"><%= event.title %></h3>
+          <span class="dates"><%= event.custom_date || format_event_dates(event) %></span>
+        </a>
+      <% end %>
     </div>
   </article>
 </section>

@@ -1,0 +1,75 @@
+title: Rails Girls Groningen
+location: Groningen
+start_date: 2019-02-01
+end_date: 2019-02-02
+volunteers: 
+  - {
+    name: woop,
+    twitter: wap
+  }
+schedule:
+  -
+      date: 2019-02-01
+      planning:
+        -
+          start_time: 18:30
+          end_time: 19:00
+          title: Doors Open and Registration
+          description: Where:<br />HackerOne office, Stationsweg 3F Groningen
+        -
+          start_time: 19:00
+          end_time: 19:30
+          title: Pizza!!!!!!!
+          description: You can't do anything on an empty stomach, so we'll first provide you with fooooood and some drinks.
+        -
+          start_time: 19:30
+          end_time: 19:55
+          title: Opening talk
+          description: TBA
+        -
+          start_time: 19:55
+          end_time: 21:00
+          title: Let's get started!
+          description: Our amazing coaches will help you install Ruby on Rails and some other stuff, so you'll be all good to go! Once you've got everything set up, you'll get started on TryRuby
+        -
+          start_time: 21:00
+          end_time: end
+          title: Install party
+          description: Get to know the attendees and the coaches a little bit before hand. There will be drinks and snacks and music and awesomeness!
+
+  -
+      date: 2019-02-02
+      planning:
+        -
+          start_time: 9:30
+          end_time: 10:00
+          title: Registration and coffee
+        -
+          start_time: 10:00
+          end_time: 10:15
+          title: Welcome
+          description: Outline of the day & word from sponsors
+        -
+          start_time: 10:15
+          end_time: 13:00
+          title: Workshop
+          description: Jumpstart your first web application
+        -
+          start_time: 13:00
+          end_time: 13:30
+          title: Lunch
+        -
+          start_time: 13:45
+          end_time: 14:30
+          title: Lightning talks time!
+          description: TBA
+        -
+          start_time: 14:30
+          end_time: 16:30
+          title: Workshop
+          description: Extend your application.
+        -
+          start_time: 17:00
+          end_time: 
+          title: Afterparty
+          description: Hang out with all the participants! Chat, relax, have a drink, ...

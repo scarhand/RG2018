@@ -1,13 +1,48 @@
 ---
+page: event
 ---
 <%
 event_data = data.events[event]
 current_page.data.title = event_data.title
 %>
 
-<div class="container">
-  <%= event_data.location %>
-  <% event_data.volunteers.each do |v| %>
-    <%= v.name %>
-  <% end %>
+<section class="header">
+  <h1><%= event_data.title %></h1>
+  <h2><%= event_data.custom_date || format_event_dates(event_data) %></h2>
+</section>
+
+<div class="second container">
+  <section class="schedule">
+    <h1>Schedule</h1>
+    <% event_data.schedule.each do |day| %>
+      <h2><%= day.date.strftime("%A, %e#{day.date.day.ordinal} %B") %></h2>
+      <div class="planning">
+        <% day.planning.each do |item| %>
+          <div class="activity">
+            <div class="time"><%= format_activity_time(item.start_time) %> - <%= format_activity_time(item.end_time) %></div>
+            <div class="info">
+              <h3><%= item.title %></h3>
+              <p><%= item.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end if event_data.schedule %>
+  </section>
+  <section class="sidebar">
+    <article class="information">
+      <h3>Information</h3>
+    </article>
+    <article class="partners">
+      <h3>Partners</h3>
+    </article>
+    <article class="faq">
+      <h3>Faq</h3>
+    </article>
+  </section>
+</div>
+<div class="third container">
+  <section class="team">
+    <h1>Team</h1>
+  </section>
 </div>

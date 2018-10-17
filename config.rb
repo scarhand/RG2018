@@ -1,3 +1,6 @@
+require "lib/integer"
+require "lib/array"
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -50,6 +53,10 @@ end
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+# Middleman fails to reload helpers, although it notices their modification
+# This force-reloads them
+Dir['helpers/*'].each(&method(:load))
 
 configure :development do
   activate :livereload

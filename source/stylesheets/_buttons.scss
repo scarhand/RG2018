@@ -18,24 +18,24 @@
     cursor: default;
   }
 }
-.hard-pink {
+.rg-red {
   transition: background-color 200ms linear;
-  background: #FA2583;
-  border: solid 2px #FA2583;
+  background: $rg-red;
+  border: solid 2px $rg-red;
   &:not(:disabled):hover,
   &:not(:disabled):focus {
     background: #FFFFFF;
-    color: #FA2583;
+    color: $rg-red;
   }
   &:disabled:hover {
-    background: #FA2583;
+    background: $rg-red;
   }
   &.outline {
     background: #FFFFFF;
-    color: #FA2583;
+    color: $rg-red;
     &:not(:disabled):hover,
     &:not(:disabled):focus {
-      background: #FA2583;
+      background: $rg-red;
       color: #FFFFFF;
     }
   }

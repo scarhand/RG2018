@@ -1,4 +1,4 @@
-.index {
+body.index {
   .header {
     height: 400px;
     width: 100%;
@@ -47,6 +47,33 @@
         }
         p {
           padding: 0 20px;
+        }
+      }
+    }
+    .upcoming-events {
+      margin-top: 40px;
+      .events {
+        display: flex;
+        width: $twelve-col;
+        flex-wrap: wrap;
+        .event {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: $four-col;
+          margin-top: 30px;
+          img {
+            max-width: 80px;
+            max-height: 80px;
+            margin-bottom: 10px;
+          }
+          .title {
+            color: $rg-red;
+          }
+          .dates {
+            display: block;
+            color: #000000;
+          }
         }
       }
     }

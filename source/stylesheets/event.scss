@@ -1,0 +1,71 @@
+body.event {
+  .header {
+    height: 400px;
+    width: 100%;
+    background: rebeccapurple;
+    display: flex;
+    justify-content: center;
+  }
+  .second.container {
+    flex-direction: row;
+    margin-top: 60px;
+    .schedule {
+      width: $eight-col;
+      h1 {
+        margin-top: 0;
+      }
+      h2:not(:first-of-type) {
+        padding-top: 20px;
+      }
+      .planning {
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+          border-bottom: solid 1px $light-bg;
+        }
+        .activity {
+          display: flex;
+          margin-bottom: 15px;
+          .time {
+            margin-right: 20px;
+            color: #333;
+            font-style: italic;
+            width: $two-col;
+          }
+          .info {
+            flex: 1;
+            h3{
+              margin: 0 0 20px 0;
+              color: $rg-red;
+            }
+            p {
+
+            }
+          }
+        }
+      }
+    }
+    .sidebar {
+      width: $four-col;
+      article { 
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        &:not(:last-child) {
+          border-bottom: solid 1px $light-bg;
+        }
+        h3 {
+          color: $rg-red;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .third.container {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: solid 1px $light-bg;
+    h1 {
+      margin-top: 0;
+    }
+  }
+}

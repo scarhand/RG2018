@@ -32,7 +32,10 @@ p {
 
 a {
   text-decoration: none;
+  color: $rg-red;
 }
 
 @import "header.scss";
+@import "footer.scss";
 @import "index.scss";
+@import "event.scss";
