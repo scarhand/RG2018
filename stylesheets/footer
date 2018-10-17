@@ -1,0 +1,4 @@
+body > footer {
+  background: #F4F4F4;
+  padding: 40px 0;
+  margin-top: 60px; }
